@@ -1,10 +1,11 @@
+import Home from "@/components/pages/home/Home";
 
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello Real estate project
-    </h1>
+    <>
+    <Home/>
+    </>
 
   );
 }
