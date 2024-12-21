@@ -18,20 +18,26 @@ const PriceCard = () => {
             <p>{item.ptext}</p>
 
             <ul>
-              {item.list.map((val) => {
+              {item.list.map((val,idx) => {
                 const { icon, text, change } = val
                 return (
-                  <li>
-                    <label
-                      style={{
-                        background: change === "color" ? "#dc35451f" : "#27ae601f",
-                        color: change === "color" ? "#dc3848" : "#27ae60",
-                      }}
-                    >
-                      {icon}
-                    </label>
-                    <p>{text}</p>
-                  </li>
+                  <li key={idx} >
+              <label
+                style={{
+                  background: change === "color" ? "#dc35451f" : "#27ae601f",
+                  color: change === "color" ? "#dc3848" : "#27ae60",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                }}
+              >
+                {icon}
+              </label>
+              <p>{text}</p>
+            </li>
                 )
               })}
             </ul>

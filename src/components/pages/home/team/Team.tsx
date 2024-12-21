@@ -25,9 +25,26 @@ const Team = () => {
                   <label>{val.address}</label>
                   <h4>{val.name}</h4>
 
-                  <ul>
+                  <ul style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+  }}>
                     {val.icon.map((icon, index) => (
-                      <li  key={index}>{icon}</li>
+                      <li  key={index} style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '50px', // Optional: Fixed size for the container
+                        height: '50px', // Optional: Fixed size for the container
+                        margin: '5px', // Space between items
+                        borderRadius: '50%', // Optional: Makes the container circular
+                        backgroundColor: 'rgba(0, 0, 0, 0.1)', // Optional: Background color for the icon
+                      }}
+                >{icon}</li>
                     ))}
                   </ul>
                   <div className='button flex'>
